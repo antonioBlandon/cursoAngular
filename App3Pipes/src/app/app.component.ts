@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   nombre = 'Antonio';
+  contrasena: boolean = true;
+  titleButton: string = 'Desactivar';
   nombre2 = 'josE anTonIo blanDon toRRes';
+  video = 'mOeSfOJrUIk';
   arreglo = [1,2,3,4,5,6,7,8,9,10];
   PI = Math.PI;
   numberDecimal = 0.234;
@@ -26,4 +29,14 @@ export class AppComponent {
       casa: '19'
     }
   };
+
+  constrasenaPipe() {
+    this.contrasena = !this.contrasena;
+    if(this.contrasena) {
+      this.titleButton = 'Desactivar';
+    } else {
+      this.titleButton = 'Activar';
+    }
+  }
+
 }
