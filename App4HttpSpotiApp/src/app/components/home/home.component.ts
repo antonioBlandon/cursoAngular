@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PaisesService } from '../../services/paises.service';
+import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +9,12 @@ import { PaisesService } from '../../services/paises.service';
 })
 export class HomeComponent implements OnInit {
   
-  paises: any[] = [];
+  newReleases: any[] = [];
 
-  constructor(private paisesService: PaisesService) { 
-    this.paisesService.getAllCountries().subscribe( (result: any[]) => {
-      this.paises = result;
-      console.log(this.paises);
-      
+  constructor(private spotifyService: SpotifyService) { 
+    this.spotifyService.getNewReleases().subscribe( (result: any) => {
+      this.newReleases = result.albums.items;
+      console.log(this.newReleases);
     });
   }
 
