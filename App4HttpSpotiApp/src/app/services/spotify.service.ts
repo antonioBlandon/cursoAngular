@@ -30,7 +30,7 @@ export class SpotifyService {
     
     //El token solo es valido por una hora. Si el servicio falla, esto deberia ser lo primero que se revise
     const headers = new HttpHeaders({
-      'Authorization':'Bearer BQADoUFhvz3B2g3VZzm4xl9_PEJLcsb3TB0vWI2T5XDwEgxd8Hd4ToICW9u3CZQFd1mezwOgGG3BmheqraM'
+      'Authorization':'Bearer QDtRb-UWzC_4hYMnXG9H_FK1sw_3_kkL1q3xquNhxJ_DiUW2sXpPpyCOOqaKE4xMXR7RXousrvrhyJGasg'
     });
     const url = `https://api.spotify.com/v1/${query}`;
 
